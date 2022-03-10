@@ -2,9 +2,9 @@
 @section('content')
 <h1>{{$title}}</h1>
 @if(count($courses) > 0)
-<ul>
+<ul class="list-group">
     @foreach($courses as $course)
-    <li>{{$course}}</li>
+    <li class="list-group-item">{{$course}}</li>
     @endforeach
 </ul>
 @endsection
