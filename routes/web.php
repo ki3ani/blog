@@ -22,7 +22,7 @@ Route::get('/services', 'App\Http\Controllers\PagesController@services');
 Route::get('/course','App\Http\Controllers\PagesController@course');
 
 
-
+Route::resource('posts','App\Http\Controllers\PostsController');
 
 
 
