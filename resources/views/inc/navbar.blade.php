@@ -1,4 +1,4 @@
-  <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+<nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
     <div class="container">
         <a class="navbar-brand" href="{{ url('/') }}">
             {{ config('app.name', 'Laravel') }}
@@ -12,26 +12,24 @@
             <ul class="navbar-nav me-auto">
 
             </ul>
-
-
+            
             <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link" href="/services">Services</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/course">Courses</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/about">About</a>
-              </li>
-              <li class="nav-item"> 
-                <a class="nav-link" href="/posts">Blog</a>
-              </li>
-            </ul>
-            <ul class="nav navbar-nav ml-auto">
-              <li><a href="/posts/create">Create Post</a></li>
-            </ul>
-
+                <li class="nav-item">
+                  <a class="nav-link" href="/services">Services</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/course">Courses</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/about">About</a>
+                </li>
+                <li class="nav-item"> 
+                  <a class="nav-link" href="/posts">Blog</a>
+                </li>
+              </ul>
+              <ul class="nav navbar-nav ml-auto">
+                <li><a href="/posts/create">Create Post</a></li>
+              </ul>
             <!-- Right Side Of Navbar -->
             <ul class="navbar-nav ms-auto">
                 <!-- Authentication Links -->
@@ -48,9 +46,8 @@
                         </li>
                     @endif
                 @else
-                     
-                <li><a href="/home"></a>Dashboard</li>
                     <li class="nav-item dropdown">
+                        
                         <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                             {{ Auth::user()->name }}
                         </a>
@@ -61,12 +58,13 @@
                                              document.getElementById('logout-form').submit();">
                                 {{ __('Logout') }}
                             </a>
-
+                            <li><a href="/home">Home</a></li>
                             <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                 @csrf
                             </form>
                         </div>
                     </li>
+                    
                 @endguest
             </ul>
         </div>
