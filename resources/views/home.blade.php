@@ -17,7 +17,30 @@
                     {{ __('You are logged in!') }}
                 </div>
             </div>
+<<<<<<< HEAD
         </div>
     </div>
 </div>
+=======
+            <div class="panel-body">
+                <a href="/posts/create" class="btn btn-primary">Create Post</a>
+            </div>
+        </div>
+    </div>
+</div>
+<table class="table table-striped>">
+    <tr>
+        <th>Title</th>
+        <th></th>
+        <th></th>
+    </tr>
+    @foreach($posts as $post)
+     <tr>
+         <th>{{$post->title}}</th>
+         <th><a href="/posts/{{$post->id}}/edit" class="btn btn-default"></a></th>
+         <th></th>
+     </tr>
+    @endforeach
+</table>
+>>>>>>> 0d0ac59bf03ad9a8a642413d6cec3759149b8896
 @endsection
