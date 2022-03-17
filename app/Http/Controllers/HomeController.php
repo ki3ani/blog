@@ -10,10 +10,6 @@ use App\Models\User;
 
 
 
-
-
-
-
 class HomeController extends Controller
 {
     /**
@@ -33,8 +29,9 @@ class HomeController extends Controller
      */
     public function index()
     {
+
         $user_id = auth()->user()->id;
-        $user = User::find($user_id);
-        return view('home')->with('posts', $user->posts);
+        $user = User::find($user_id)->posts()->paginate(10);
+        return view('home')->with('posts', $user);
     }
 }
