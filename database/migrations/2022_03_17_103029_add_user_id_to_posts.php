@@ -13,12 +13,8 @@ class AddUserIdToPosts extends Migration
      */
     public function up()
     {
-<<<<<<< HEAD
         Schema::table('posts', function (Blueprint $table) {
-=======
-        Schema::table('posts', function ($table) {
->>>>>>> 0d0ac59bf03ad9a8a642413d6cec3759149b8896
-            $table->integer('user_id');
+            //
         });
     }
 
@@ -29,12 +25,8 @@ class AddUserIdToPosts extends Migration
      */
     public function down()
     {
-<<<<<<< HEAD
         Schema::table('posts', function (Blueprint $table) {
-=======
-        Schema::table('posts', function ($table) {
->>>>>>> 0d0ac59bf03ad9a8a642413d6cec3759149b8896
-            $table->dropColumn('user_id');
+            
         });
     }
 }

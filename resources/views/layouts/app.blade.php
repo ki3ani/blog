@@ -30,7 +30,7 @@
     
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" ></script>
-    <script src="//cdn.ckeditor.com/4.4.7/standard/ckeditor.js"></script>">
+    <script src="//cdn.ckeditor.com/4.4.7/standard/ckeditor.js"></script>
     <script>
       CKEDITOR.replace( 'article-ckeditor' );
 
