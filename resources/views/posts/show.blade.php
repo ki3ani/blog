@@ -3,11 +3,13 @@
 @section('content')
 <a href="/posts" class="btn btn-default">Go Back</a>
 <h1>{{$post->title}}</h1>
+<img style="width:50%" src="/storage/cover_images/{{$post->cover_image}}">
+<br>
 <div>
     {!!$post->body!!}
 </div>
 <hr>
-<small>Written on {{$post->created_at}}  by {{auth()->user()::find($post->user_id)->name}}</small>
+<small>Written on {{$post->created_at}} </small>
 <hr>
 @if(!Auth::guest())
     @if(Auth::user()->id == $post->user_id)
