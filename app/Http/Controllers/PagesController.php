@@ -18,7 +18,7 @@ class PagesController extends Controller
      public function services(){
          $data = array(
              'title' => 'Services',
-             'services' => ['Coding','Design','Science']
+             'services' => ['Writing','Research','Drawing','Photography']
          );
          return view('pages.services') ->with($data);
      }
@@ -26,7 +26,7 @@ class PagesController extends Controller
      public function course(){
          $data = array(
              'title' => 'Course',
-             'courses' => ['Data Science','Machine Learning','Art Design']
+             'courses' => ['Photography','Movies','Art']
                  );
                  return view('pages.course') ->with($data);
                  }
